@@ -1,0 +1,45 @@
+{
+  "paths": [
+    {
+      "name": "/todos",
+      "lambdaFunction": "todosLambda",
+      "privacy": {
+        "protected": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ],
+        "unauth": [
+          "/GET"
+        ]
+      },
+      "policyResourceName": "/todos"
+    }
+  ],
+  "resourceName": "todosApi",
+  "apiName": "todosApi",
+  "functionArns": [
+    {
+      "lambdaFunction": "todosLambda"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 1,
+    "authRoleName": "amplify-amplifyapp-dev-124758-authRole",
+    "unAuthRoleName": "amplify-amplifyapp-dev-124758-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "todosLambda",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
