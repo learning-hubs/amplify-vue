@@ -11,6 +11,7 @@
     "@aws-amplify/ui-vue": "^1.0.10",
     "aws-amplify": "^4.0.3",
     "core-js": "^3.6.5",
+    "uuid": "^8.3.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
